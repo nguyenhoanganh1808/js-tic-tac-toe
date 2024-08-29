@@ -6,10 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 
 <body>
+    <div class="container">
+        <h1 class="turn">tur</h1>
+        <div class="board"></div>
+        <button class="control-game-button" type="button">Start Game</button>
+    </div>
+
+    <div class="players-container">
+        <h1 id="player1"></h1>
+        <h1 id="player2"></h1>
+        <button id="open-dialog" class="set-player-name">Set player name</button>
+    </div>
+
+    <dialog>
+        <h2>Set Players Name</h2>
+        <form class="set-player-form">
+            <div>
+                <label for="player1-name">Player 1 Name: *</label>
+                <input type="text" id="player1-name" name="player1-name" required>
+                <span></span>
+            </div>
+            <div>
+                <label for="player2-name">Player 2 Name: *</label>
+                <input type="text" id="player2-name" name="player2-name" required>
+                <span></span>
+            </div>
+            <div class="dialog-button">
+                <button id="cancel-btn">
+                    Cancel
+                </button>
+                <button id="submit-btn" type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </dialog>
 
 </body>
 

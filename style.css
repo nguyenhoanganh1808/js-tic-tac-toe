@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Bebas Neue", sans-serif;
+
+  background-color: #fdd1dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.container {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.turn {
+  /* background-color: green; */
+}
+
+.board {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.cell {
+  font-size: 5rem;
+  background-color: #f42853;
+  border: 1px solid white;
+  font-weight: bold;
+  color: white;
+}
+
+.board button:nth-child(1) {
+  border-top-left-radius: 16px;
+}
+
+.board button:nth-child(3) {
+  border-top-right-radius: 16px;
+}
+
+.board button:nth-child(7) {
+  border-bottom-left-radius: 16px;
+}
+
+.board button:nth-child(9) {
+  border-bottom-right-radius: 16px;
+}
+
+.control-game-button {
+  display: block;
+  width: 500px;
+  padding: 16px 32px;
+  border-radius: 16px;
+  background-color: #f42853;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+}
+
+.set-player-name {
+  padding: 16px 32px;
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+  border-radius: 16px;
+  border: none;
+  background-color: #f9cb39;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #dd7f74;
+}
+
+.control-game-button:hover {
+  background-color: #f46484;
+}
+
+.container + div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-left: 24px;
+}
+
+dialog {
+  padding: 24px;
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.set-player-form div:last-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+input,
+label {
+  font-family: inherit;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  appearance: none;
+}
+
+input {
+  padding: 4px 12px;
+}
+
+input + span {
+  margin-top: 4px;
+}
+
+input:invalid + span::after {
+  color: red;
+  content: "Please fill this field";
+}
+
+.dialog-button > button {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+#cancel-btn {
+  background-color: white;
+  border: 1px solid #f42853;
+}
+
+#submit-btn {
+  background-color: #f42853;
+  color: white;
+  border: none;
+}
